@@ -49,5 +49,7 @@ lib
 prisma
 public
 actions
-app
+app/(auth)
+app/(main)
+app/api
 README.md
