@@ -41,7 +41,7 @@ next-env.d.ts
 .env
 
 
-components/ui
+
 emails
 hooks
 lib
