@@ -46,7 +46,6 @@ emails
 hooks
 lib
 prisma
-public
 actions
 app/(auth)
 app/(main)
