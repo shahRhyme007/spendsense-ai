@@ -44,10 +44,13 @@ next-env.d.ts
 
 emails
 hooks
-lib
 prisma
 actions
 app/(auth)
 app/(main)
 app/api
 README.md
+lib/inngest
+lib/arcjet.js
+lib/checkUser.js
+lib/prisma.js
