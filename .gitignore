@@ -50,5 +50,4 @@ app/(auth)
 app/(main)
 app/api
 README.md
-lib/checkUser.js
 lib/prisma.js
