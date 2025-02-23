@@ -50,6 +50,5 @@ app/(auth)
 app/(main)
 app/api
 README.md
-lib/arcjet.js
 lib/checkUser.js
 lib/prisma.js
