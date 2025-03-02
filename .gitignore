@@ -48,6 +48,6 @@ prisma
 actions
 app/(auth)
 app/(main)
-app/api
+app/api/seed
 README.md
 lib/prisma.js
