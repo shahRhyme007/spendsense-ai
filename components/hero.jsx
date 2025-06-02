@@ -42,9 +42,9 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
+          <Link href="https://github.com/shahRhyme007/spendsense-ai" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
+              Get Code
             </Button>
           </Link>
         </div>

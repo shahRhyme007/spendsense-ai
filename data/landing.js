@@ -5,6 +5,9 @@ import {
   CreditCard,
   Globe,
   Zap,
+  TrendingUp,
+  Target,
+  DollarSign,
 } from "lucide-react";
 
 // Stats Data
@@ -88,24 +91,33 @@ export const howItWorksData = [
 // Testimonials Data
 export const testimonialsData = [
   {
-    name: "Sarah Johnson",
-    role: "Small Business Owner",
-    image: "https://randomuser.me/api/portraits/women/75.jpg",
-    quote:
-      "SpendSense AI has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+    name: "Alexandra Chen",
+    role: "Tech Entrepreneur",
+    company: "InnovateLab",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    quote: "SpendSense AI helped me reduce business expenses by 40% in just 3 months. The AI predictions are incredibly accurate!",
+    achievement: "40% Cost Reduction",
+    icon: <TrendingUp className="h-5 w-5 text-green-500" />,
+    rating: 5,
   },
   {
-    name: "Michael Chen",
-    role: "Freelancer",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
-    quote:
-      "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
+    name: "Marcus Rodriguez",
+    role: "Investment Banker",
+    company: "Goldman Sachs",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    quote: "Finally, a financial tool that thinks like I do. The real-time insights have saved me over $50,000 in potential losses.",
+    achievement: "$50K+ Saved",
+    icon: <DollarSign className="h-5 w-5 text-green-500" />,
+    rating: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Financial Advisor",
-    image: "https://randomuser.me/api/portraits/women/74.jpg",
-    quote:
-      "I recommend SpendSense AI to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+    name: "Priya Sharma",
+    role: "Financial Consultant",
+    company: "WealthMax Advisory",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    quote: "My clients' portfolio performance improved by 35% after implementing SpendSense AI's recommendations. It's a game-changer!",
+    achievement: "35% Performance Boost",
+    icon: <Target className="h-5 w-5 text-green-500" />,
+    rating: 5,
   },
 ];

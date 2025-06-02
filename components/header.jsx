@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { PenBox, LayoutDashboard } from "lucide-react";
+import { PenBox, LayoutDashboard, CreditCard } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUser";
@@ -35,6 +35,22 @@ const Header = async () => {
               Testimonials
             </a>
           </SignedOut>
+          <SignedIn>
+            <div className="flex items-center space-x-6">
+              <Link
+                href="/dashboard"
+                className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              >
+                Dashboard
+              </Link>
+              <Link
+                href="/transaction"
+                className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              >
+                Transactions
+              </Link>
+            </div>
+          </SignedIn>
         </div>
 
         {/* Action Buttons */}
