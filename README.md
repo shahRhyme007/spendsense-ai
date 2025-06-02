@@ -2,7 +2,7 @@
   
 # 💰 SpendSense AI
 
-<img src="/public/logo.png" alt="SpendSense AI Logo" width="200" height="60">
+<img src="/public/Logo.png" alt="SpendSense AI Logo" width="200" height="60">
 
 **An AI-Powered Financial Management Platform**
 
@@ -187,26 +187,30 @@ Budget {
    
    Fill in your environment variables:
    ```env
-   # Database
-   DATABASE_URL="your_postgresql_connection_string"
+   # Clerk Authentication Keys
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_[your_publishable_key]
+   CLERK_SECRET_KEY=sk_test_[your_secret_key]
    
-   # Clerk Authentication
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-   CLERK_SECRET_KEY=your_clerk_secret_key
-   CLERK_WEBHOOK_SECRET=your_clerk_webhook_secret
+   # Supabase Database Configuration
+   DATABASE_URL="postgresql://postgres.[your_project_ref]:[your_password]@aws-0-us-east-2.pooler.supabase.com:6543/postgres?pgbouncer=true"
    
-   # Google AI
-   GEMINI_API_KEY=your_google_ai_api_key
+   # Direct Database Connection (for migrations)
+   DIRECT_URL="postgresql://postgres.[your_project_ref]:[your_password]@aws-0-us-east-2.pooler.supabase.com:5432/postgres"
    
-   # Resend (Email)
-   RESEND_API_KEY=your_resend_api_key
+   # Clerk Authentication URLs
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
    
-   # ArcJet (Security)
-   ARCJET_KEY=your_arcjet_key
+   # Google AI API
+   GEMINI_API_KEY=[your_gemini_api_key]
    
-   # Inngest (Background Jobs)
-   INNGEST_EVENT_KEY=your_inngest_event_key
-   INNGEST_SIGNING_KEY=your_inngest_signing_key
+   # Resend Email Service
+   RESEND_API_KEY=re_[your_resend_api_key]
+   
+   # ArcJet Security
+   ARCJET_KEY=[your_arcjet_key]
    ```
 
 4. **Set up the database**
@@ -315,7 +319,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### 👨‍💻 **Developer**
 - **Name**: Shah Arif Rahman Rhyme
 - **GitHub**: [@shahRhyme007](https://github.com/shahRhyme007)
-- **Email**: [your-email@example.com](mailto:rhymeshah.uta@gmail.com)
+- **Email**: [rhymeshah.uta@gmail.com](mailto:rhymeshah.uta@gmail.com)
 
 ### 🚀 **Project Links**
 - **Repository**: [github.com/shahRhyme007/spendsense-ai](https://github.com/shahRhyme007/spendsense-ai)
