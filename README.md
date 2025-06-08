@@ -14,7 +14,7 @@
 [![Prisma](https://img.shields.io/badge/Prisma-5.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://prisma.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-[🚀 Live Demo](https://spendsense-ai.vercel.app) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://github.com/shahRhyme007/spendsense-ai/issues) • [✨ Request Feature](https://github.com/shahRhyme007/spendsense-ai/issues)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Now-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://spendsense-ai.vercel.app) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://github.com/shahRhyme007/spendsense-ai/issues) • [✨ Request Feature](https://github.com/shahRhyme007/spendsense-ai/issues)
 
 </div>
 
@@ -24,6 +24,18 @@
 
 <div align="center">
   <img src="/public/banner.jpg" alt="SpendSense AI Dashboard Preview" width="800" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+</div>
+
+### 🎯 **Try It Now - No Installation Required!**
+
+<div align="center">
+
+**Experience SpendSense AI in action with our live demo**
+
+[![Open Live Demo](https://img.shields.io/badge/🚀_Open_Live_Demo-spendsense--ai.vercel.app-blue?style=for-the-badge&logo=vercel&logoColor=white)](https://spendsense-ai.vercel.app)
+
+*Click the button above to explore all features instantly!*
+
 </div>
 
 ---
@@ -79,7 +91,7 @@
 - **Email Service**: Resend
 - **Security**: ArcJet (Rate limiting, Bot protection)
 - **File Storage**: Supabase Storage
-- **Deployment**: Vercel
+- **Deployment**: Vercel ✅ **[Live at spendsense-ai.vercel.app](https://spendsense-ai.vercel.app)**
 
 ### **Development Tools**
 - **Language**: JavaScript (ES6+)
@@ -152,6 +164,23 @@ Budget {
 ---
 
 ## 🚀 Getting Started
+
+### 🌐 **Quick Start - Try Online**
+
+**Want to test SpendSense AI immediately?** 
+
+👉 **[Visit Live Demo](https://spendsense-ai.vercel.app)** - No setup required!
+
+- ✅ **Instant Access** - Start using the app in seconds
+- ✅ **All Features Available** - Experience the complete functionality
+- ✅ **No Registration** - Explore without commitment
+- ✅ **Mobile Responsive** - Works on any device
+
+---
+
+### 💻 **Local Development Setup**
+
+Want to run SpendSense AI locally or contribute to the project? Follow the steps below:
 
 ### Prerequisites
 
@@ -339,9 +368,10 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - **Email**: [rhymeshah.uta@gmail.com](mailto:rhymeshah.uta@gmail.com)
 
 ### 🚀 **Project Links**
-- **Repository**: [github.com/shahRhyme007/spendsense-ai](https://github.com/shahRhyme007/spendsense-ai)
-- **Live Demo**: [spendsense-ai.vercel.app](https://spendsense-ai.vercel.app)
-- **Issues**: [Report bugs or request features](https://github.com/shahRhyme007/spendsense-ai/issues)
+- **🌐 Live Demo**: [spendsense-ai.vercel.app](https://spendsense-ai.vercel.app) ⭐ **Try it now!**
+- **📱 Repository**: [github.com/shahRhyme007/spendsense-ai](https://github.com/shahRhyme007/spendsense-ai)
+- **🐛 Issues**: [Report bugs or request features](https://github.com/shahRhyme007/spendsense-ai/issues)
+- **📊 Analytics**: Live performance metrics available in dashboard
 
 ---
 
