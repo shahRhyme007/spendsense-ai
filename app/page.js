@@ -195,29 +195,29 @@ const LandingPage = () => {
                 className="text-center group"
                 variants={scaleIn}
                 whileHover={{ 
-                  scale: 1.05,
+                  scale: 1.05, 
                   transition: { duration: 0.2 } 
                 }}
               >
                 <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <motion.div 
+                <motion.div 
                     className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2"
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                     transition={{ delay: index * 0.2, duration: 0.6 }}
-                  >
+                >
                     <AnimatedCounter value={stat.value} duration={1.5 + index * 0.2} />
-                  </motion.div>
-                  <motion.div 
+                </motion.div>
+                <motion.div 
                     className="text-blue-100 font-medium text-sm sm:text-base"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
                     transition={{ delay: index * 0.2 + 0.3, duration: 0.4 }}
-                  >
-                    {stat.label}
-                  </motion.div>
+                >
+                  {stat.label}
+                </motion.div>
                 </div>
               </motion.div>
             ))}
@@ -243,7 +243,7 @@ const LandingPage = () => {
               Powerful Features
             </Badge>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-6">
-              Everything you need to manage your finances
+            Everything you need to manage your finances
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Advanced AI-powered tools designed to give you complete control over your financial future
@@ -259,7 +259,7 @@ const LandingPage = () => {
                 key={index}
                 variants={scaleIn}
                 whileHover={{ 
-                  y: -10,
+                  y: -10, 
                   transition: { duration: 0.3 } 
                 }}
                 className="group"
@@ -275,7 +275,7 @@ const LandingPage = () => {
                       }}
                     >
                       <div className="text-white">
-                        {feature.icon}
+                      {feature.icon}
                       </div>
                     </motion.div>
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-700 transition-colors">
@@ -346,11 +346,11 @@ const LandingPage = () => {
                 <motion.div 
                   className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 relative"
                   whileHover={{ 
-                    rotate: 360,
-                    scale: 1.1,
+                      rotate: 360,
+                      scale: 1.1,
                     transition: { duration: 0.6 }
-                  }}
-                >
+                    }}
+                  >
                   <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold text-gray-900">
                     {index + 1}
                   </div>
@@ -477,38 +477,38 @@ const LandingPage = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-            >
-              Ready to Take Control of Your Finances?
-            </motion.h2>
+          >
+            Ready to Take Control of Your Finances?
+          </motion.h2>
             
-            <motion.p 
+          <motion.p 
               className="text-lg sm:text-xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
-              variants={fadeInUp}
-              transition={{ delay: 0.2 }}
-            >
+            variants={fadeInUp}
+            transition={{ delay: 0.2 }}
+          >
               Join thousands of users who are already managing their finances smarter with AI-powered insights
-            </motion.p>
+          </motion.p>
             
-            <motion.div
+          <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
-              variants={fadeInUp}
-              transition={{ delay: 0.4 }}
-            >
-              <Link href="/dashboard">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button
-                    size="lg"
+            variants={fadeInUp}
+            transition={{ delay: 0.4 }}
+          >
+            <Link href="/dashboard">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Button
+                  size="lg"
                     className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
-                  >
-                    Start Free Trial
+                >
+                  Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </motion.div>
-              </Link>
+                </Button>
+              </motion.div>
+            </Link>
               
               <motion.div 
                 className="flex items-center text-white/80 text-sm"

@@ -88,8 +88,8 @@ export function AnimatedTestimonials({ testimonials }) {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 text-sm font-semibold border-0 shadow-lg">
-                    {testimonials[currentIndex].icon}
-                    {testimonials[currentIndex].achievement}
+                  {testimonials[currentIndex].icon}
+                  {testimonials[currentIndex].achievement}
                   </Badge>
                 </motion.div>
 
@@ -138,20 +138,20 @@ export function AnimatedTestimonials({ testimonials }) {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="relative">
-                      <Image
-                        src={testimonials[currentIndex].image}
-                        alt={testimonials[currentIndex].name}
+                    <Image
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
                         width={80}
                         height={80}
                         className="rounded-full border-4 border-white shadow-xl"
-                      />
-                      <motion.div 
+                    />
+                    <motion.div 
                         className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-3 border-white shadow-md"
                         animate={{ 
                           scale: [1, 1.3, 1],
                           boxShadow: ["0 0 0 0 rgba(34, 197, 94, 0.7)", "0 0 0 10px rgba(34, 197, 94, 0)", "0 0 0 0 rgba(34, 197, 94, 0)"]
                         }}
-                        transition={{ duration: 2, repeat: Infinity }}
+                      transition={{ duration: 2, repeat: Infinity }}
                       />
                     </div>
                   </motion.div>
@@ -254,7 +254,7 @@ export function AnimatedTestimonials({ testimonials }) {
                 animate={{ scale: [1, 1.5, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 style={{ opacity: 0.6 }}
-              />
+          />
             )}
           </motion.button>
         ))}

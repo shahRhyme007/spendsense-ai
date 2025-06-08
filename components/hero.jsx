@@ -185,7 +185,7 @@ const HeroSection = () => {
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+            </Button>
             </motion.div>
           </Link>
           
@@ -235,14 +235,14 @@ const HeroSection = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <Image
-                src="/banner.jpg"
-                width={1280}
-                height={720}
+            <Image
+              src="/banner.jpg"
+              width={1280}
+              height={720}
                 alt="SpendSense AI Dashboard Preview"
                 className="rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 mx-auto max-w-full sm:max-w-5xl w-full"
-                priority
-              />
+              priority
+            />
             </motion.div>
             
             {/* Floating UI Elements */}

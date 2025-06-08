@@ -10,7 +10,7 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19_RC-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Prisma](https://img.shields.io/badge/Prisma-5.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://prisma.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
@@ -82,10 +82,9 @@
 - **Deployment**: Vercel
 
 ### **Development Tools**
-- **Language**: JavaScript/TypeScript
+- **Language**: JavaScript (ES6+)
 - **Package Manager**: npm
 - **Linting**: ESLint
-- **Code Formatting**: Prettier
 - **Version Control**: Git & GitHub
 
 ---
@@ -121,31 +120,28 @@ Account {
 }
 
 Transaction {
-  id          String    @id @default(cuid())
-  type        TransactionType
-  amount      Decimal   @db.Decimal(12, 2)
-  description String?
-  date        DateTime
-  category    String
-  receiptUrl  String?
-  isRecurring Boolean   @default(false)
-  intervalDays Int?
-  nextDue     DateTime?
-  userId      String
-  accountId   String
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  account     Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id                  String    @id @default(cuid())
+  type                TransactionType
+  amount              Decimal   @db.Decimal(12, 2)
+  description         String?
+  date                DateTime
+  category            String
+  receiptUrl          String?
+  isRecurring         Boolean   @default(false)
+  recurringInterval   RecurringInterval?
+  nextRecurringDate   DateTime?
+  status              TransactionStatus @default(COMPLETED)
+  userId              String
+  accountId           String
+  user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  account             Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
 }
 
 Budget {
   id          String    @id @default(cuid())
-  category    String
   amount      Decimal   @db.Decimal(12, 2)
-  spent       Decimal   @default(0) @db.Decimal(12, 2)
-  period      BudgetPeriod
-  alertThreshold Int    @default(80)
   userId      String
   user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt   DateTime  @default(now())
@@ -175,8 +171,13 @@ Budget {
 
 2. **Install dependencies**
    ```bash
+   # Recommended: Use legacy peer deps to handle Clerk/Next.js version conflicts
    npm install --legacy-peer-deps
-   # or
+   
+   # Alternative: Use the custom script
+   npm run install:safe
+   
+   # Or with yarn
    yarn install --legacy-peer-deps
    ```
 
@@ -211,6 +212,10 @@ Budget {
    
    # ArcJet Security
    ARCJET_KEY=[your_arcjet_key]
+   
+   # Inngest (Background Jobs)
+   INNGEST_EVENT_KEY=[your_inngest_event_key]
+   INNGEST_SIGNING_KEY=[your_inngest_signing_key]
    ```
 
 4. **Set up the database**
