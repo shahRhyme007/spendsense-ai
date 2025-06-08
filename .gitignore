@@ -42,9 +42,6 @@ next-env.d.ts
 
 
 
-emails
-hooks
-prisma
 actions
 app/(auth)
 app/(main)
