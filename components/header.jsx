@@ -14,8 +14,8 @@ const Header = async () => {
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
-            src={"/logo.png"}
-            alt="spendSense AI Logo"
+            src={"/Logo.png"}
+            alt="SpendSense AI Logo"
             width={200}
             height={60}
             className="h-12 w-auto object-contain"
@@ -65,27 +65,25 @@ const Header = async () => {
                 <span className="hidden md:inline">Dashboard</span>
               </Button>
             </Link>
-            <a href="/transaction/create">
+            <Link href="/transaction/create">
               <Button className="flex items-center gap-2">
                 <PenBox size={18} />
                 <span className="hidden md:inline">Add Transaction</span>
               </Button>
-            </a>
+            </Link>
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10 rounded-full border-2 border-gray-200 hover:border-blue-300 transition-colors",
+                },
+              }}
+            />
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
               <Button variant="outline">Login</Button>
             </SignInButton>
           </SignedOut>
-          <SignedIn>
-            <UserButton
-              appearance={{
-                elements: {
-                  avatarBox: "w-10 h-10",
-                },
-              }}
-            />
-          </SignedIn>
         </div>
       </nav>
     </header>
