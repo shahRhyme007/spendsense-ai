@@ -42,8 +42,6 @@ next-env.d.ts
 
 
 
-actions
-app/(auth)
-app/(main)
+
 app/api/seed
 lib/prisma.js
