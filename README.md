@@ -161,6 +161,15 @@ Budget {
 - **Clerk** account for authentication
 - **Google AI** API key (for Gemini)
 
+### 🔧 Dependency Compatibility
+
+This project includes a `.npmrc` file that automatically handles peer dependency conflicts between React 19, Next.js 15, and Clerk. The main compatibility updates include:
+
+- **React 19** stable version (updated from RC)
+- **Next.js 15.2.3** (compatible with Clerk)
+- **react-day-picker 9.1.3** (React 19 compatible)
+- **Automatic legacy peer deps** configuration for seamless installation
+
 ### Installation
 
 1. **Clone the repository**
@@ -171,10 +180,13 @@ Budget {
 
 2. **Install dependencies**
    ```bash
-   # Recommended: Use legacy peer deps to handle Clerk/Next.js version conflicts
+   # Standard installation (now works with .npmrc configuration)
+   npm install
+   
+   # Alternative: Use legacy peer deps explicitly
    npm install --legacy-peer-deps
    
-   # Alternative: Use the custom script
+   # Or use the custom script
    npm run install:safe
    
    # Or with yarn
@@ -354,7 +366,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### ⭐ Don't forget to star this repository if you found it helpful!
 
-**Made with ❤️ by [Shah Arifur Rahman Rhyme](https://github.com/shahRhyme007)**
+**Made by [Shah Arifur Rahman Rhyme](https://github.com/shahRhyme007)**
 
 *SpendSense AI - Your intelligent financial companion* 💰
 
