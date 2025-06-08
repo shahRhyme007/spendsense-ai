@@ -125,7 +125,7 @@ const LandingPage = () => {
 
       {/* Trust Indicators */}
       <motion.section 
-        className="py-16 bg-white border-y border-gray-100"
+        className="py-12 md:py-16 bg-white border-y border-gray-100"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
@@ -140,11 +140,11 @@ const LandingPage = () => {
               <Shield className="w-4 h-4 mr-2" />
               Trusted by 50,000+ Users
             </Badge>
-            <div className="flex justify-center items-center space-x-8 opacity-60">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 opacity-60">
               {['Microsoft', 'Google', 'Apple', 'Amazon', 'Tesla'].map((brand, i) => (
                 <motion.div
                   key={brand}
-                  className="text-2xl font-bold text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
+                  className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
                   variants={fadeInUp}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ scale: 1.05, opacity: 0.8 }}
@@ -159,7 +159,7 @@ const LandingPage = () => {
 
       {/* Enhanced Stats Section */}
       <motion.section 
-        className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 relative overflow-hidden"
+        className="py-16 md:py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 relative overflow-hidden"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
@@ -170,23 +170,23 @@ const LandingPage = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16 px-4"
             variants={fadeInUp}
           >
             <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">
               <Sparkles className="w-4 h-4 mr-2" />
               Real-time Analytics
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               Trusted by Thousands
             </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
               Join professionals worldwide who are already managing their finances smarter
             </p>
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
             variants={staggerContainer}
           >
             {statsData.map((stat, index) => (
@@ -199,9 +199,9 @@ const LandingPage = () => {
                   transition: { duration: 0.2 } 
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <motion.div 
-                    className="text-4xl md:text-5xl font-bold text-white mb-2"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2"
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -210,7 +210,7 @@ const LandingPage = () => {
                     <AnimatedCounter value={stat.value} duration={1.5 + index * 0.2} />
                   </motion.div>
                   <motion.div 
-                    className="text-blue-100 font-medium"
+                    className="text-blue-100 font-medium text-sm sm:text-base"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -228,30 +228,30 @@ const LandingPage = () => {
       {/* Enhanced Features Section */}
       <motion.section 
         id="features" 
-        className="py-24 relative"
+        className="py-16 md:py-24 relative"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-20 px-4"
             variants={fadeInUp}
           >
             <Badge variant="outline" className="mb-4 px-4 py-2">
               <Zap className="w-4 h-4 mr-2" />
               Powerful Features
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-6">
               Everything you need to manage your finances
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Advanced AI-powered tools designed to give you complete control over your financial future
             </p>
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             variants={staggerContainer}
           >
             {featuresData.map((feature, index) => (
@@ -265,9 +265,9 @@ const LandingPage = () => {
                 className="group"
               >
                 <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-gray-50 group-hover:from-blue-50 group-hover:to-indigo-50">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6 sm:p-8">
                     <motion.div
-                      className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
                       whileHover={{ 
                         rotate: 5,
                         scale: 1.1,
@@ -278,10 +278,10 @@ const LandingPage = () => {
                         {feature.icon}
                       </div>
                     </motion.div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-700 transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                       {feature.description}
                     </p>
                     <motion.div 
@@ -300,7 +300,7 @@ const LandingPage = () => {
 
       {/* Enhanced How It Works Section */}
       <motion.section 
-        className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden"
+        className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
@@ -310,28 +310,28 @@ const LandingPage = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-20 px-4"
             variants={fadeInUp}
           >
             <Badge variant="outline" className="mb-4 px-4 py-2">
               <Users className="w-4 h-4 mr-2" />
               Simple Process
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Get started in 3 simple steps
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Our streamlined onboarding process gets you up and running in minutes, not hours
             </p>
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-12 relative"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative"
             variants={staggerContainer}
           >
-            {/* Connection Lines */}
-            <div className="hidden md:block absolute top-1/2 left-1/3 w-1/3 h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 -translate-y-1/2"></div>
-            <div className="hidden md:block absolute top-1/2 left-2/3 w-1/3 h-0.5 bg-gradient-to-r from-purple-300 to-blue-300 -translate-y-1/2"></div>
+            {/* Connection Lines - Hidden on mobile */}
+            <div className="hidden lg:block absolute top-24 left-1/4 w-1/4 h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 z-0"></div>
+            <div className="hidden lg:block absolute top-24 right-1/4 w-1/4 h-0.5 bg-gradient-to-r from-purple-300 to-blue-300 z-0"></div>
             
             {howItWorksData.map((step, index) => (
               <motion.div 
@@ -344,17 +344,17 @@ const LandingPage = () => {
                 }}
               >
                 <motion.div 
-                  className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-8 relative"
+                  className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 relative"
                   whileHover={{ 
                     rotate: 360,
                     scale: 1.1,
                     transition: { duration: 0.6 }
                   }}
                 >
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold text-gray-900">
+                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-6 h-6 sm:w-8 sm:h-8 bg-yellow-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold text-gray-900">
                     {index + 1}
                   </div>
-                  <div className="text-white text-2xl">
+                  <div className="text-white text-xl sm:text-2xl">
                     {step.icon}
                   </div>
                 </motion.div>
@@ -396,7 +396,7 @@ const LandingPage = () => {
       {/* Enhanced Testimonials Section */}
       <motion.section 
         id="testimonials" 
-        className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
+        className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
@@ -411,7 +411,7 @@ const LandingPage = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-20 px-4"
             variants={fadeInUp}
           >
             <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20">
@@ -419,7 +419,7 @@ const LandingPage = () => {
               Customer Success
             </Badge>
             <motion.h2 
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -428,7 +428,7 @@ const LandingPage = () => {
               Real Results from Real Users
             </motion.h2>
             <motion.p 
-              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -443,7 +443,7 @@ const LandingPage = () => {
 
       {/* Enhanced CTA Section */}
       <motion.section 
-        className="py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 relative overflow-hidden"
+        className="py-16 md:py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 relative overflow-hidden"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
@@ -472,7 +472,7 @@ const LandingPage = () => {
             </Badge>
             
             <motion.h2 
-              className="text-4xl md:text-6xl font-bold text-white mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -482,7 +482,7 @@ const LandingPage = () => {
             </motion.h2>
             
             <motion.p 
-              className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
@@ -490,7 +490,7 @@ const LandingPage = () => {
             </motion.p>
             
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
               variants={fadeInUp}
               transition={{ delay: 0.4 }}
             >
@@ -502,7 +502,7 @@ const LandingPage = () => {
                 >
                   <Button
                     size="lg"
-                    className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                    className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
                   >
                     Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -520,26 +520,26 @@ const LandingPage = () => {
             </motion.div>
             
             <motion.div 
-              className="mt-12 text-center"
+              className="mt-8 md:mt-12 text-center px-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               <p className="text-blue-200 text-sm mb-4">Trusted by professionals at</p>
-              <div className="flex justify-center items-center space-x-8 opacity-60">
+              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 opacity-60">
                 {['Google', 'Microsoft', 'Apple', 'Tesla', 'Netflix'].map((company, index) => (
-                  <motion.span
-                    key={company}
-                    className="text-white font-medium"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 0.6, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
-                    whileHover={{ opacity: 1, scale: 1.1 }}
-                  >
-                    {company}
-                  </motion.span>
+                                  <motion.span
+                  key={company}
+                  className="text-white font-medium text-sm sm:text-base"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.6, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
+                  whileHover={{ opacity: 1, scale: 1.1 }}
+                >
+                  {company}
+                </motion.span>
                 ))}
               </div>
             </motion.div>

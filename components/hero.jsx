@@ -103,7 +103,7 @@ const HeroSection = () => {
 
         {/* Main Heading */}
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 md:mb-8 leading-tight px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -132,7 +132,7 @@ const HeroSection = () => {
 
         {/* Subtitle */}
         <motion.p 
-          className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,7 +146,7 @@ const HeroSection = () => {
 
         {/* Trust Indicators */}
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 md:mb-12 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -168,7 +168,7 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <motion.div 
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -181,7 +181,7 @@ const HeroSection = () => {
             >
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 border-0"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 border-0 w-full sm:w-auto"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -200,7 +200,7 @@ const HeroSection = () => {
 
         {/* Features Preview */}
         <motion.div
-          className="flex flex-wrap justify-center gap-8 mb-16 text-sm text-gray-600"
+          className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16 text-sm text-gray-600 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -240,14 +240,14 @@ const HeroSection = () => {
                 width={1280}
                 height={720}
                 alt="SpendSense AI Dashboard Preview"
-                className="rounded-2xl shadow-2xl border border-gray-200 mx-auto"
+                className="rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 mx-auto max-w-full sm:max-w-5xl w-full"
                 priority
               />
             </motion.div>
             
             {/* Floating UI Elements */}
             <motion.div
-              className="absolute -top-4 -left-4 bg-white rounded-xl p-4 shadow-lg border"
+              className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 shadow-lg border text-xs sm:text-sm"
               animate={{
                 y: [0, -10, 0],
               }}
@@ -264,7 +264,7 @@ const HeroSection = () => {
             </motion.div>
 
             <motion.div
-              className="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-lg border"
+              className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 shadow-lg border text-xs sm:text-sm"
               animate={{
                 y: [0, 10, 0],
               }}
@@ -282,7 +282,7 @@ const HeroSection = () => {
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-xl p-4 shadow-lg border"
+              className="absolute -bottom-2 sm:-bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg sm:rounded-xl p-2 sm:p-4 shadow-lg border text-xs sm:text-sm"
               animate={{
                 scale: [1, 1.05, 1],
               }}
